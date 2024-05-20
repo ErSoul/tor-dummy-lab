@@ -1,0 +1,2 @@
+HiddenServiceDir /var/lib/tor/service
+HiddenServicePort 666 unix:/tmp/tor.sock

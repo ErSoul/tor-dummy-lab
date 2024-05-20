@@ -1,0 +1,22 @@
+version: "0.1"
+services:
+  tor-client:
+    build:
+      context: .
+      dockerfile: client.dockerfile
+    container_name: client
+    expose:
+      - 9050
+    networks:
+      tor-network:
+  tor-service:
+    build:
+      context: .
+      dockerfile: service.dockerfile
+    container_name: service
+    networks:
+      tor-network:
+
+networks:
+  tor-network:
+    name: tor-network
